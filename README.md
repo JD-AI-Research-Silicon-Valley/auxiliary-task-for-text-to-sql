@@ -1,5 +1,5 @@
 # Zero-shot Text-to-SQL Learning with Auxiliary Task
-Code for [Zero-shot Text-to-SQL Learning with Auxiliary Task] (https://arxiv.org/pdf/1908.11052.pdf)
+Code for [Zero-shot Text-to-SQL Learning with Auxiliary Task](https://arxiv.org/pdf/1908.11052.pdf)
 
 ## Usage
 
@@ -23,7 +23,7 @@ Please use Python 3.6 and Pytorch 1.3. Other Python dependency is in requirement
 ### Run the model on original WikiSQL and our split
 
 ```
-	cd TwoStream
+	cd zero-shot-text-to-SQL
 	./run.sh  GPU_ID
 ```
 

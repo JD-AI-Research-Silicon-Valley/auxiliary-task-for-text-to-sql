@@ -58,13 +58,14 @@ def main():
 
     print("Saving train/valid/fields")
     # Can't save fields, so remove/reconstruct at training time.
+    if os.path.exists(opt.save_data) is False:
+        os.mkdir(opt.save_data)
     torch.save(table.IO.TableDataset.save_vocab(fields),
                open(os.path.join(opt.save_data, 'vocab.pt'), 'wb'))
     train.fields = []
     valid.fields = []
-    print(os.path.join(opt.save_data, 'valid.pt'))
-    torch.save(train, open(os.path.join(opt.save_data, 'train.pt'), 'wb'))
     torch.save(valid, open(os.path.join(opt.save_data, 'valid.pt'), 'wb'))
+    torch.save(train, open(os.path.join(opt.save_data, 'train.pt'), 'wb'))
     #torch.save(test, open(os.path.join(opt.save_data, 'test.pt'), 'wb'))
 
 
